@@ -1,5 +1,6 @@
 [![Build Docker Images](https://github.com/maaad/Silero-TTS-Service/actions/workflows/build.yml/badge.svg)](https://github.com/maaad/Silero-TTS-Service/actions/workflows/build.yml)
-[![MIT License][license-shield]][license-url]
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 # Silero TTS Service
 
