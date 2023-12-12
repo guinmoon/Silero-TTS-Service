@@ -20,8 +20,8 @@ class Settings(BaseSettings):
 
     silero_settings = {
         'ru': {
-            'model_link': 'https://models.silero.ai/models/tts/ru/v3_1_ru.pt',
-            'model_name': 'ru_model.pt',
+            'model_link': 'https://models.silero.ai/models/tts/ru/v4_ru.pt',
+            'model_name': 'silero_model_v4.pt',
             'speakers': [
                 'aidar', 'baya', 'kseniya', 'xenia', 'eugene', 'random'
             ]
