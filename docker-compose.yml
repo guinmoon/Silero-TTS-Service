@@ -2,7 +2,7 @@ version: '3'
 
 services:
   silero-tts-service:
-    image: "navatusein/silero-tts-service"
+    image: ghcr.io/maaad/silero-tts-service:latest
     container_name: "silero-tts_service-service"
     deploy:
       resources:
