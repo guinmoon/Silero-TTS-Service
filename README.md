@@ -1,8 +1,4 @@
-![Supports aarch64 Architecture][aarch64-badge]
-![Supports amd64 Architecture][amd64-badge]
-![Supports armhf Architecture][armhf-badge]
-![Supports armv7 Architecture][armv7-badge]
-![Supports i386 Architecture][i386-badge]
+[![Build Docker Images](https://github.com/maaad/Silero-TTS-Service/actions/workflows/build.yml/badge.svg)](https://github.com/maaad/Silero-TTS-Service/actions/workflows/build.yml)
 [![MIT License][license-shield]][license-url]
 
 # Silero TTS Service
