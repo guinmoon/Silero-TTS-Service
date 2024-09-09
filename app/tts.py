@@ -25,9 +25,18 @@ def generate_speach(text: str, speaker: str, sample_rate: int, file_path: str, s
     temp_file_path = audios_directory + 'temp.wav'
 
     torch.no_grad()
-    model.save_wav(ssml_text=text, speaker=speaker, audio_path=temp_file_path, sample_rate=sample_rate)
-
     command = f'sox ./audios/temp.wav {file_path} {sox_params}'
+    if len(text)>1000:
+        last_sentece_end = text[:990].rfind('.')
+        if last_sentece_end<len(text)/2:
+            last_sentece_end = 990
+        text_first = text[:last_sentece_end] + "</speak>"
+        text_second = "<speak>"+text[last_sentece_end:]
+        model.save_wav(ssml_text=text_first, speaker=speaker, audio_path=temp_file_path+".1", sample_rate=sample_rate)        
+        model.save_wav(ssml_text=text_second, speaker=speaker, audio_path=temp_file_path+".2", sample_rate=sample_rate)        
+        command = f'sox ./audios/temp.wav.1 ./audios/temp.wav.2 {file_path} {sox_params}'
+    else: 
+        model.save_wav(ssml_text=text, speaker=speaker, audio_path=temp_file_path, sample_rate=sample_rate)        
     os.system(command)
 
     return True
